@@ -1,5 +1,5 @@
 from .camera import Camera
 
 
-class Gphoto(Camera):
+class Webcam(Camera):
     ...
