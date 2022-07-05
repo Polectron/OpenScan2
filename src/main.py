@@ -1,21 +1,11 @@
-from typing import Optional, Union
-from time import time
-
-from PIL import Image
-import gphoto2 as gp
 from fastapi import FastAPI
 
-try:
-    # checks if you have access to RPi.GPIO, which is available inside RPi
-    import RPi.GPIO as GPIO
-except:
-    # In case of exception, you are executing your script outside of RPi, so import Mock.GPIO
-    import Mock.GPIO as GPIO
-
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
+from .routers import cameras, scanner
 
 app = FastAPI()
+
+app.include_router(cameras.router)
+app.include_router(scanner.router)
 
 
 @app.get("/")
