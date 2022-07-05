@@ -3,7 +3,6 @@ from dataclasses import dataclass
 
 @dataclass
 class CameraConfig:
-    type: str
     shutter: int
     saturation: int
     contrast: int

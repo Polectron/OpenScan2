@@ -9,4 +9,4 @@ class OpenScanConfig:
     rotor: MotorConfig
     tt: MotorConfig
     ring_light_pin: int
-    cameras: list[CameraConfig]
+    cameras: "list[CameraConfig]"
