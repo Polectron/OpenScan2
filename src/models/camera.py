@@ -6,8 +6,8 @@ from src.config.camera import CameraConfig
 
 
 class CameraType(Enum):
-    GPHOTO2: 0
-    V4L2: 1
+    GPHOTO2 = 0
+    V4L2 = 1
 
 
 @dataclass
@@ -16,4 +16,4 @@ class Camera:
     name: str
     path: str
 
-    config: Optional[CameraConfig]
+    settings: Optional[CameraConfig]
