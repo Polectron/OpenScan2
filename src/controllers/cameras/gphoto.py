@@ -3,10 +3,10 @@ import gphoto2 as gp
 
 from src.models.camera import Camera
 
-from .camera import Controller
+from .camera import CameraController
 
 
-class GphotoController(Controller):
+class GphotoController(CameraController):
     @staticmethod
     def _get_gp_camera(camera: Camera) -> gp.Camera:
         port_info_list = gp.PortInfoList()
@@ -21,17 +21,17 @@ class GphotoController(Controller):
         gp_camera.set_abilities(abilities_list[idx])
         return gp_camera
 
-    def picture(camera: Camera) -> io.BytesIO:
+    def photo(camera: Camera) -> io.BytesIO:
         gp_camera = GphotoController._get_gp_camera(camera)
         file_path = gp_camera.capture(gp.GP_CAPTURE_IMAGE)
         camera_file = gp_camera.file_get(
             file_path.folder, file_path.name, gp.GP_FILE_TYPE_NORMAL
         )
-        camera_file.exit()
+        gp_camera.exit()
         return io.BytesIO(camera_file)
 
     def preview(camera: Camera) -> io.BytesIO:
         gp_camera = GphotoController._get_gp_camera(camera)
         camera_file = gp.gp_camera_capture_preview(gp_camera)[1]
-        camera_file.exit()
+        gp_camera.exit()
         return io.BytesIO(camera_file)
