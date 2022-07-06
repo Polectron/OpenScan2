@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Optional
 
-from src.config.scanner import ScannerConfig
+from app.config.scanner import ScannerConfig
 
 @dataclass
 class Scanner:

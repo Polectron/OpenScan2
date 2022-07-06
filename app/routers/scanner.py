@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from src.controllers.scanner import ScannerController
+from app.controllers.scanner import ScannerController
 
 router = APIRouter(
     prefix="/scanner",

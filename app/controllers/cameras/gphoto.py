@@ -1,7 +1,7 @@
 import io
 import gphoto2 as gp
 
-from src.models.camera import Camera
+from app.models.camera import Camera
 
 from .camera import CameraController
 

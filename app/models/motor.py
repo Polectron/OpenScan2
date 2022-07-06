@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Optional
 
-from src.config.motor import MotorConfig
+from app.config.motor import MotorConfig
 
 @dataclass
 class Motor:

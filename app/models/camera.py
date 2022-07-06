@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Optional
 
-from src.config.camera import CameraSettings
+from app.config.camera import CameraSettings
 
 
 class CameraType(Enum):

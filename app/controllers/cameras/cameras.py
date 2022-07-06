@@ -1,11 +1,11 @@
 from typing import Optional
 from v4l2py.device import iter_video_capture_devices
 import gphoto2 as gp
-from src.controllers.cameras.camera import CameraController
-from src.controllers.cameras.gphoto import GphotoController
-from src.controllers.cameras.v4l2 import V4l2Controller
+from app.controllers.cameras.camera import CameraController
+from app.controllers.cameras.gphoto import GphotoController
+from app.controllers.cameras.v4l2 import V4l2Controller
 
-from src.models.camera import Camera, CameraType, CameraSettings
+from app.models.camera import Camera, CameraType, CameraSettings
 
 
 def get_cameras() -> "list[Camera]":
@@ -49,7 +49,7 @@ def get_camera(camera_id: int) -> Camera:
     return cameras[camera_id]
 
 
-def get_camera_controller(camera: Camera) -> type[CameraController]:
+def get_camera_controller(camera: Camera) -> "type[CameraController]":
     if camera.type == CameraType.V4L2:
         return V4l2Controller
     elif camera.type == CameraType.GPHOTO2:

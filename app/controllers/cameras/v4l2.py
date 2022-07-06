@@ -1,7 +1,7 @@
 import io
 from v4l2py import Device
 
-from src.models.camera import Camera
+from app.models.camera import Camera
 
 from .camera import CameraController
 

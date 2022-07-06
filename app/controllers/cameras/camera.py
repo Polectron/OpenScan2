@@ -1,7 +1,7 @@
 import abc
 import io
 
-from src.models.camera import Camera
+from app.models.camera import Camera
 
 
 class CameraController(abc.ABC):

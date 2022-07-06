@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from src.controllers.scanner import ScannerController
-from src.controllers.motor import MotorController
+from app.controllers.scanner import ScannerController
+from app.controllers.motor import MotorController
 
 router = APIRouter(
     prefix="/motors",

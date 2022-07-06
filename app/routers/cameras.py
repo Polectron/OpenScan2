@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Response
 from fastapi.encoders import jsonable_encoder
 
-from src.controllers.cameras.v4l2 import V4l2Controller
-from src.controllers.cameras.cameras import (
+from app.controllers.cameras.v4l2 import V4l2Controller
+from app.controllers.cameras.cameras import (
     get_camera,
     get_camera_controller,
     get_cameras,

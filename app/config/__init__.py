@@ -1,5 +1,5 @@
-from src.config.scanner import ScannerConfig
-from src.config.cloud import OpenScanCloudConfig
+from app.config.scanner import ScannerConfig
+from app.config.cloud import OpenScanCloudConfig
 
 
 class OpenScanConfig:

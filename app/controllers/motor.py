@@ -1,7 +1,7 @@
 from time import sleep
 from math import cos
 
-from src.models.motor import Motor
+from app.models.motor import Motor
 
 try:
     import RPi.GPIO as GPIO

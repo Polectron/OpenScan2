@@ -1,5 +1,5 @@
-from src.models.motor import Motor
-from src.config import config
+from app.models.motor import Motor
+from app.config import config
 
 try:
     import RPi.GPIO as GPIO
@@ -8,7 +8,7 @@ except:
 
 
 class ScannerController:
-    def get_motors() -> list[Motor]:
+    def get_motors() -> "list[Motor]":
         return []
 
     def get_motor(motor_id: id) -> Motor:
