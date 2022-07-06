@@ -28,10 +28,10 @@ class GphotoController(CameraController):
             file_path.folder, file_path.name, gp.GP_FILE_TYPE_NORMAL
         )
         gp_camera.exit()
-        return io.BytesIO(camera_file)
+        return io.BytesIO(camera_file.get_data_and_size())
 
     def preview(camera: Camera) -> io.BytesIO:
         gp_camera = GphotoController._get_gp_camera(camera)
         camera_file = gp.gp_camera_capture_preview(gp_camera)[1]
         gp_camera.exit()
-        return io.BytesIO(camera_file)
+        return io.BytesIO(camera_file.get_data_and_size())
