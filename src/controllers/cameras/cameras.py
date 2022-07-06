@@ -4,9 +4,8 @@ import gphoto2 as gp
 from src.controllers.cameras.camera import CameraController
 from src.controllers.cameras.gphoto import GphotoController
 from src.controllers.cameras.v4l2 import V4l2Controller
-from src.config.camera import CameraConfig
 
-from src.models.camera import Camera, CameraType
+from src.models.camera import Camera, CameraType, CameraSettings
 
 
 def get_cameras() -> "list[Camera]":
@@ -39,7 +38,7 @@ def get_cameras() -> "list[Camera]":
     return cameras
 
 
-def get_camera_settings(name: str, path: str) -> Optional[CameraConfig]:
+def get_camera_settings(name: str, path: str) -> Optional[CameraSettings]:
     return None
 
 
