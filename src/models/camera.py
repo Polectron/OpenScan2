@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Optional
 
-from src.config.camera import CameraConfig
+from src.config.camera import CameraSettings
 
 
 class CameraType(Enum):
@@ -16,4 +16,4 @@ class Camera:
     name: str
     path: str
 
-    settings: Optional[CameraConfig]
+    settings: Optional[CameraSettings]
