@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 
 @dataclass
-class CameraConfig:
+class CameraSettings:
     shutter: int
     saturation: int
     contrast: int
