@@ -1,0 +1,12 @@
+{
+    "steps_per_rotation": 17067,
+    "direction": 0,
+    "acceleration_ramp": 2000,
+    "acceleration": 1,
+    "delay": 0.1,
+
+    "direction_pin": 5,
+    "step_pin": 6,
+    "enable_pin": 23,
+    "endstop_pin": 24
+}
