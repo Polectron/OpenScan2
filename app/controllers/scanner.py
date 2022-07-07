@@ -8,8 +8,8 @@ except:
 
 
 class ScannerController:
-    def get_motors() -> "list[Motor]":
-        return []
+    def get_motors() -> "dict[str, Motor]":
+        return {}
 
     def get_motor(motor_id: id) -> Motor:
         return None
